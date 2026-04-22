@@ -1,7 +1,7 @@
 from tkinter import Tk, messagebox
-from scr.reader.reader import selecionar_arquivos, selecionar_excel, selecionar_pdf
-from scr.processor.validator import extrair_texto_pdf, extrair_ccbs, ler_planilha
-from scr.report.report_generator import gerar_relatorio, selecionar_saida
+from src.reader.reader import selecionar_arquivos
+from src.processor.validator import extrair_texto_pdf, extrair_ids, ler_planilha
+from src.report.report_generator import gerar_relatorio, selecionar_saida
 
 
 
@@ -33,10 +33,10 @@ def main():
 
         texto = extrair_texto_pdf(pdf_path)
 
-        ccbs_pdf = extrair_ccbs(texto)
-        ccbs_planilha = ler_planilha(excel_path)
+        ids_pdf = extrair_ids(texto)
+        ids_planilha = ler_planilha(excel_path)
 
-        gerar_relatorio(ccbs_pdf, ccbs_planilha, saida)
+        gerar_relatorio(ids_pdf, ids_planilha, saida)
 
         messagebox.showinfo("Sucesso", "Auditoria concluída!")
 
@@ -45,4 +45,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
