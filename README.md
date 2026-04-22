@@ -102,6 +102,3 @@ Exemplo de saída gerada pelo sistema:
 
 
 <img width="430" height="109" alt="f93bd620-dd53-4dc6-b36a-6c524bbdd8a1" src="https://github.com/user-attachments/assets/5a2a0446-71a9-4115-aa85-2453e183a0e6" />
-
-
-[adicione aqui um print do Excel]
